@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   # API用のルート
   namespace :api do
-    resource :auth, only: [], controller: 'auth' do
+    resource :auth, only: [], controller: "auth" do
       post :register
       post :login
       delete :logout
@@ -19,7 +19,7 @@ Rails.application.routes.draw do
       put :password, action: :reset_password
 
       # パスワード変更（ログイン済み）
-      put 'password/change', action: :change_password
+      put "password/change", action: :change_password
     end
   end
 

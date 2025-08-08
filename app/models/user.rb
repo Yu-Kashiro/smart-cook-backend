@@ -15,7 +15,7 @@ class User < ApplicationRecord
 
   # JWT revocation strategy methods
   def self.jwt_revoked?(payload, user)
-    user.jti != payload['jti'] if user&.respond_to?(:jti)
+    user.jti != payload["jti"] if user&.respond_to?(:jti)
   end
 
   def self.revoke_jwt(payload, user)
